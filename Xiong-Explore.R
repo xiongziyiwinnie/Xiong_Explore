@@ -1,5 +1,6 @@
 #Problem 1
 #To find a way that can find all the numerica columns in a data frame
+## Prof G: This is correct but data_fame is undefined. I used diamonds and it worked correctly
 col_isnum=data_frame[sapply(data_frame,is.numeric)]
 #extract all the numeric variables from the data_frame and name them with col_isnum. 
 #The class of col_isnum is still data frame.
