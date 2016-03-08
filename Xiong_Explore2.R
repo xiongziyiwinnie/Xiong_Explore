@@ -158,9 +158,15 @@ test=as.logical(rep(mtcars$vs,len=nrow(data)))
 #change this new colunm into logical type and assign it to new variable test
 diamonds1=data.frame(data,test)
 #add this column test to the data frame data
-explore(diamonds1,c(5,20,50),0.25)
+
+##Prof G: Should return a list of things
+outlist <- explore(diamonds1,c(5,20,50),0.25)
 
 #Example2:
+#Prof G: This has errors during execution and does not finish
 explore(mtcars,c(5,20,50),0.25)
 #for this test example, I have errors. I think it is because in mtcars dataset, there is no
 #factorial and logical columns.
+
+for (i in 1:length(outlist)) {print(outlist[i])}
+str(outlist)
