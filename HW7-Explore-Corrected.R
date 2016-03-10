@@ -1,3 +1,6 @@
+##Prof G: Nice update. Don't forget to write function headers desribing the  
+##Prof G: purpose of the function and the expected parameters.
+
 explore <- function(dataframe,binsize,threshold)
 {
   require("ggplot2")
@@ -184,8 +187,10 @@ test=as.logical(rep(mtcars$vs,len=nrow(data)))
 #change this new colunm into logical type and assign it to new variable test
 diamonds1=data.frame(data,test)
 #add this column test to the data frame data
-explore(diamonds1,c(5,20,50),0.25)
-
+outlist <- explore(diamonds1,c(5,20,50),0.25)
+str(outlist)
 
 #Example2:
-explore(mtcars,c(5,20,50),0.25)
+outlist <- explore(mtcars,c(5,20,50),0.25)
+
+for (i in 1:length(outlist)) {print(outlist[i])}
